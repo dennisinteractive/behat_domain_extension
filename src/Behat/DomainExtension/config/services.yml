@@ -1,0 +1,14 @@
+parameters:
+  domain.context.initializer.class: Behat\DomainExtension\Context\Initializer\DomainAwareInitializer
+
+  # Parameters.
+  domain.parameters: {}
+  domain.domain_map: {}
+
+services:
+  domain.context.initializer:
+    class: %domain.context.initializer.class%
+    arguments:
+      - %domain.parameters%
+    tags:
+      - { name: context.initializer }

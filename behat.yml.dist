@@ -1,0 +1,9 @@
+default:
+  suites:
+    default:
+      contexts:
+        - FeatureContext
+  extensions:
+    Behat\DomainExtension:
+      domain_map:
+        Example: "http://example.com"
