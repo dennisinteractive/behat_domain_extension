@@ -39,8 +39,8 @@ class DomainExtension implements ExtensionInterface {
     $loader = new YamlFileLoader($container, new FileLocator(__DIR__ . '/../config'));
     $loader->load('services.yml');
 
-    $this->loadContextInitializer($container);
     $this->loadParameters($container, $config);
+    $this->loadContextInitializer($container);
   }
 
   /**
@@ -55,7 +55,7 @@ class DomainExtension implements ExtensionInterface {
   public function configure(ArrayNodeDefinition $builder) {
     $builder->
       children()->
-        arrayNode('region_map')->
+        arrayNode('domain_map')->
           info("Targeting specific domains can be accomplished once they have been defined." . PHP_EOL
             . '  Wikipedia: "https://en.wikipedia.org"' . PHP_EOL
             . '  Weather dotcom: "https://weather.com/en-GB"'. PHP_EOL
@@ -70,7 +70,7 @@ class DomainExtension implements ExtensionInterface {
 
   private function loadContextInitializer(ContainerBuilder $container) {
     $definition = new Definition('Behat\DomainExtension\Context\Initializer\DomainAwareInitializer', array(
-      '%domain.parameters%',
+      '%domain.domain_map%',
     ));
     $definition->addTag(ContextExtension::INITIALIZER_TAG, array('priority' => 0));
     $container->setDefinition(self::DOMAIN_ID.'.context_initializer', $definition);
@@ -86,7 +86,6 @@ class DomainExtension implements ExtensionInterface {
       $parameters[$key] = $value;
     }
     $container->setParameter('domain.parameters', $parameters);
-
-    $container->setParameter('domain.domain_map', $config['domain_map']);
+    $container->setParameter('domain.domain_map', $parameters['domain_map']);
   }
 }

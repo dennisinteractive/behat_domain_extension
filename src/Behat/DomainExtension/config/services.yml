@@ -9,6 +9,6 @@ services:
   domain.context.initializer:
     class: %domain.context.initializer.class%
     arguments:
-      - %domain.parameters%
+      - %domain.domain_map%
     tags:
       - { name: context.initializer }

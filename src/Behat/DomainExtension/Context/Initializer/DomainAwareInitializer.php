@@ -9,7 +9,7 @@ use Behat\Behat\Context\Context;
 class DomainAwareInitializer implements ContextInitializer {
   private $domains;
 
-  public function __construct(array $domains) {
+  public function __construct($domains) {
     $this->domains = $domains;
   }
 
@@ -21,6 +21,8 @@ class DomainAwareInitializer implements ContextInitializer {
     if (!$context instanceof DomainAwareInterface) {
       return;
     }
+
+    $context->setDomains($this->domains);
   }
 
 }
