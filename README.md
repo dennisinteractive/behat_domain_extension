@@ -7,7 +7,7 @@ It provides common step definitions for testing domain based features.
 
 When testing sites which have multiple domains configured or when testing across multiple domains we need a way to tell Mink which domain we want to run our scenarios against.
 
-# How?
+## How?
 
 By default Mink supports a single base url that it will prepend all relative urls to. The domain extension allows us to switch this base url in our Scenarios depending on the domain we're testing by using one of the following step definitions:
 
