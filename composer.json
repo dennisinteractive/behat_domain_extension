@@ -5,19 +5,20 @@
   "keywords": ["domain", "web", "test"],
   "homepage": "https://github.com/dennisinteractive/drupal-domain-extension",
   "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Andrew Hughes-Onslow",
+      "email": "dennis@kalpaitch.com"
+    },
+  ],
   "require": {
     "behat/mink": "~1.5",
-    "behat/mink-goutte-driver": "~1.0",
-    "behat/mink-selenium2-driver": "~1.1",
     "behat/behat": "~3.1.0-rc2",
     "behat/mink-extension": "~2.0",
-    "symfony/dependency-injection": "~2.7",
-    "symfony/event-dispatcher": "~2.7"
+    "symfony/dependency-injection": "~2.7"
   },
   "require-dev": {
-    "phpspec/phpspec": "~2.0",
-    "phpunit/phpunit": "3.7.*",
-    "behat/mink-zombie-driver": "^1.2"
+    "phpspec/phpspec": "~2.0"
   },
   "autoload": {
     "psr-0": {
