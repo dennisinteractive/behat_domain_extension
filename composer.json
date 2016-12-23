@@ -4,12 +4,12 @@
   "description": "Domain extension for Behat",
   "keywords": ["domain", "web", "test"],
   "homepage": "https://github.com/dennisinteractive/drupal-domain-extension",
-  "license": "GPL-2.0+",
+  "license": "MIT",
   "authors": [
     {
       "name": "Andrew Hughes-Onslow",
       "email": "dennis@kalpaitch.com"
-    },
+    }
   ],
   "require": {
     "behat/mink": "~1.5",
