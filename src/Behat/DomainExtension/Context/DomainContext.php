@@ -2,13 +2,14 @@
 
 namespace Behat\DomainExtension\Context;
 
+use Behat\Behat\Context\TranslatableContext;
 use Behat\Behat\Hook\Scope\BeforeStepScope;
 use Behat\MinkExtension\Context\RawMinkContext;
 
 /**
  * Provides pre-built step definitions for interacting with multiple domains.
  */
-class DomainContext extends RawMinkContext implements DomainAwareInterface
+class DomainContext extends RawMinkContext implements DomainAwareInterface, TranslatableContext
 {
 
     private $domains;
@@ -50,6 +51,16 @@ class DomainContext extends RawMinkContext implements DomainAwareInterface
     public function getDomainUrl()
     {
         return $this->domainUrl;
+    }
+
+    /**
+     * Returns list of definition translation resources paths
+     *
+     * @return array
+     */
+    public static function getTranslationResources()
+    {
+        return glob(__DIR__.'/../../../../i18n/*.xliff');
     }
 
     /**

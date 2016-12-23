@@ -1,0 +1,22 @@
+<?xml version="1.0"?><xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="global" target-language="fr">
+    <body>
+      <trans-unit id="i-am-on-the-domain">
+        <source><![CDATA[I am on the domain ":domain"]]></source>
+        <target><![CDATA[Je suis sur le domaine ":domain"]]></target>
+      </trans-unit>
+      <trans-unit id="i-go-to-the-domain">
+        <source><![CDATA[I go to the domain ":domain"]]></source>
+        <target><![CDATA[Je vais sur le domaine ":domain"]]></target>
+      </trans-unit>
+      <trans-unit id="i-am-on-the-default-domain">
+        <source><![CDATA[I am on the default domain]]></source>
+        <target><![CDATA[Je suis sur le domaine par défaut]]></target>
+      </trans-unit>
+      <trans-unit id="i-go-to-the-default-domain">
+        <source><![CDATA[I go to the default domain]]></source>
+        <target><![CDATA[Je vais au domaine par défaut]]></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
