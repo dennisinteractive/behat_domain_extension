@@ -3,7 +3,7 @@
   "type": "behat-extension",
   "description": "Domain extension for Behat",
   "keywords": ["domain", "web", "test"],
-  "homepage": "https://github.com/dennisinteractive/drupal-domain-extension",
+  "homepage": "https://github.com/dennisinteractive/drupal_domain_extension",
   "license": "MIT",
   "authors": [
     {
