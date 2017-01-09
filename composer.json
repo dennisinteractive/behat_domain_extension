@@ -1,5 +1,5 @@
 {
-  "name": "behat/domain-extension",
+  "name": "dennisdigital/domain-extension",
   "type": "behat-extension",
   "description": "Domain extension for Behat",
   "keywords": ["domain", "web", "test"],
