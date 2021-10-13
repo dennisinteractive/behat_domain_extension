@@ -7,8 +7,8 @@ parameters:
 
 services:
   domain.context.initializer:
-    class: %domain.context.initializer.class%
+    class: '%domain.context.initializer.class%'
     arguments:
-      - %domain.domain_map%
+      - '%domain.domain_map%'
     tags:
       - { name: context.initializer }
