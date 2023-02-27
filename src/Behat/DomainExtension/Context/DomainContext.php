@@ -98,6 +98,7 @@ class DomainContext extends RawMinkContext implements DomainAwareInterface, Tran
         if (!empty($domains) && isset($domains[$domain])) {
             $this->setDomainUrl($domains[$domain]);
             $this->visitPath($this->getDomainUrl());
+            print_r('visiting - ' . $this->getDomainUrl());
             return;
         }
         throw new \Exception(sprintf('The domain "%s" has not been configured', $domain));
